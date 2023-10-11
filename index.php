@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="./css/login.css">
     <title>GET E POST</title>
 </head>
 <body>
@@ -22,7 +22,6 @@
                 <input type="email" name="email_login" placeholder="Email" required><br>
                 <input type="password" name="password_login" placeholder="Senha" required><br>
                 <input type="submit" value="Entrar" class="btnLogin" name="btnLogin"><br>
-                <p style="color:#fff">Não possui uma conta? <a href="../index.php">Cadastrar</a></p>
             </form>
         </div>
         
