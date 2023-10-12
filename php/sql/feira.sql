@@ -18,4 +18,7 @@ PHONE VARCHAR(255),
 
 PRIMARY KEY (COD_USER)
 );
-INSERT INTO ADMIN (EMAIL, PASSWORD) VALUES ('miguelbzr6@gmail.com','$2y$10$8X/wG2Ep6HqkUdE5kVIDMOV.Mz2melc2HJ0Da8ZFFwQBoKBJTEx0e'), ('michelesantuss@gmail.com', '$2y$10$1I43Icl586mGyDvsFSlGle5H2cfyG.Lh.QPGrJ8KoeiqgsxDStYdC');
+INSERT INTO ADMIN (EMAIL, PASSWORD)
+VALUES ('miguelbzr6@gmail.com','$2y$10$8X/wG2Ep6HqkUdE5kVIDMOV.Mz2melc2HJ0Da8ZFFwQBoKBJTEx0e'),
+('michelesantuss@gmail.com', '$2y$10$1I43Icl586mGyDvsFSlGle5H2cfyG.Lh.QPGrJ8KoeiqgsxDStYdC'),
+('mikaelfeira@gmail.com', '$2y$10$8JZOwfgcQdqXiNgZyiDE5u1g39YfZCi0fLQPYNP/JDjc7aqSvsEtO');

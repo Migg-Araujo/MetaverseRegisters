@@ -38,10 +38,31 @@ if (!isset($_SESSION['user'])) {
         <form action="?" method="post">
             <label>Nome</label>
             <input type="text" placeholder="Insira seu Nome" name="name" required><br>
+
             <label>Email</label>
             <input type="text" placeholder="Insira seu Email" name="email" required><br>
+
             <label>Telefone</label>
             <input type="text" placeholder="Insira seu Telefone" name="phone" required><br>
+            
+            <label>Qual periodo deseja estudar?</label>
+            <select name='period' required>
+                <option value="null">Já estudo na Etec</option>
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+            </select><br>
+
+            <label>Qual curso deseja fazer?</label>
+            <select name='curse' required>
+                <option value="null">Já estudo na Etec</option>
+                <option value="Administração">Administração</option>
+                <option value="Desenvolvimento de Sistemas">Desenvolvimento de Sistemas</option>
+                <option value="Eletrônica">Eletrônica</option>
+                <option value="Meio Ambiente">Meio Ambiente</option>
+                <option value="Nutrição">Nutrição</option>
+                <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+            </select><br>
             
             <input type="submit" value="Registrar" name="btnRegister" class="btnRegister">
         </form>
