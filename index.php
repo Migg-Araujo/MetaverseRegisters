@@ -19,6 +19,7 @@
 </head>
 <body>
     <div class="formLoginArea">
+    <h1>Login de Administrador</h1>
     <?php
             if(isset($_POST['email_login'])){
             include __DIR__ .'/php/login/login.php';
@@ -26,8 +27,14 @@
             ?>
         <div class="form_login">
             <form action="?" method="post">
-                <input type="email" name="email_login" placeholder="Email" required><br>
-                <input type="password" name="password_login" placeholder="Senha" required><br>
+                <div class = 'input'>
+                    <label class='label'>Email</label>
+                    <input type="email" name="email_login" placeholder="Email" required>
+                </div><br>
+                <div class = 'input'>
+                    <label class='label'>Senha</label>
+                    <input type="password" name="password_login" placeholder="Senha" required>
+                </div><br>
                 <input type="submit" value="Entrar" class="btnLogin" name="btnLogin"><br>
             </form>
         </div>

@@ -43,10 +43,10 @@ if (!isset($_SESSION['user'])) {
             <input type="text" placeholder="Insira seu Email" name="email" required><br>
 
             <label>Telefone</label>
-            <input type="text" placeholder="Insira seu Telefone" name="phone" required><br>
+            <input type="text" placeholder="Insira seu Telefone" id='phone' name="phone" required><br>
             
             <label>Data de Nascimento</label>
-            <input type="date" name="date" required><br>
+            <input type="text" id='date' placeholder='21/10/2023' name="date" required><br>
             
             <label>Qual período deseja estudar?</label>
             <select name='period' required>
@@ -82,5 +82,42 @@ if (!isset($_SESSION['user'])) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
     integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
     crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('phone').addEventListener('input', function(event) {
+            let input = event.target;
+            let value = input.value.replace(/\D/g, ''); // Remove todos os não-dígitos
+
+            if (value.length > 11) {
+                value = value.slice(0, 11);
+            }
+
+            if (value.length > 2) {
+                value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            }
+            if (value.length > 10) {
+                value = `${value.slice(0, 10)}-${value.slice(10)}`;
+            }
+
+            input.value = value;
+        });
+
+        document.getElementById('date').addEventListener('input', function(event) {
+            let input = event.target;
+            let value = input.value.replace(/\D/g, ''); // Remove todos os não-dígitos
+
+            if (value.length > 8) {
+                value = value.slice(0, 8);
+            }
+
+            if (value.length > 2) {
+                value = `${value.slice(0, 2)}/${value.slice(2)}`;
+            }
+            if (value.length > 5) {
+                value = `${value.slice(0, 2)}${value.slice(2,5)}/${value.slice(5)}`;
+            }
+
+            input.value = value;
+        });
+    </script>
 
 </html>

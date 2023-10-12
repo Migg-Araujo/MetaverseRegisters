@@ -29,30 +29,29 @@ body {
 }
 
 .form_login {
-    border: 2px solid #ffffff79;
     display: flex;
-    width: 300px;
+    width: 500px;
     height: 300px;
     justify-content: flex-start;
     align-items: center;
     border-radius: 30px;
     background: transparent;
     backdrop-filter: blur(15px);
-    box-shadow: -29px -29px 57px #ffffff3e,
-        29px 29px 57px #0000006e;
 }
 
 .form_login form input,
 select,
-label {
+
+label{
     outline: none;
     box-shadow: none;
     border: none;
+    color: #fff;
 }
 
 form {
     padding-top: 30px;
-    width: 300px;
+    width: 500px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -67,27 +66,44 @@ form {
 
 .form_login form input {
     font-weight: 500;
-    background-color: transparent;
-    border-bottom: 1px solid #C2C2C2;
+    background-color: #fff;
     color: #000;
-    height: 40px;
-    width: 70%;
+    height: 50px;
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 29px 29px 75px #00000056,
+    -29px -29px 75px #00000056;
 }
 
 .form_login form input:focus {
     color: #1F7F45;
-    border-color: #1F7F45;
+}
+.label{
+    width: 70px;
+}
+.input{
+    width: 70%;
+    height: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .form_login form input[type='submit'] {
     border: none;
     width: 70%;
-    height: 35px;
+    height: 50px;
     font-size: 16px;
-    background-color: #E6E6E6;
-    color: #C2C2C2;
+    background-color: #000;
+    color: #d2d2d2;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
+    box-shadow: 29px 29px 75px #00000056,
+    -29px -29px 75px #00000056;
+    margin: 0;
+    padding: 0;
 }
 
 .form_login form input[type='submit']:hover {
@@ -104,4 +120,8 @@ a {
 a:hover {
     color: #000;
     text-decoration: none;
+}
+h1{
+    color: #FFF;
+    margin-bottom: 60px;
 }
