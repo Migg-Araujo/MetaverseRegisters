@@ -8,7 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
-    <title>GET E POST</title>
+    <title>Login Admin</title>
+    <script type="text/javascript">
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.keyCode === 36) {
+                window.location.href = './php/sql/database.php';
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="formLoginArea">

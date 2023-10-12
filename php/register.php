@@ -1,11 +1,11 @@
 <?php
-/*if (!isset($_SESSION)) {
+if (!isset($_SESSION)) {
     session_start();
 }
 
 if (!isset($_SESSION['user'])) {
-    die("<p style='text-align:center;'>Faça o login para acessar a página. <a href =\"./../index.php\" style='text-decoration: none;';>Entrar</a></p>");
-}*/
+    die("<link rel='stylesheet' href='../css/register.css'><div class='form_register'><p class='alert'>Faça o login para acessar a página.</p><a href =\"./../index.php\";>Entrar</a></div>");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,34 +22,32 @@ if (!isset($_SESSION['user'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/registros.css">
-    <title>POST E GET</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Metaverse</title>
+    <script type="text/javascript">
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.keyCode === 36) {
+                window.location.href = './login/logout.php';
+            }
+        });
+    </script>
 </head>
 
 <body>
-    <div class="form_transacoes">
+    <div class="form_register">
         <form action="?" method="post">
-            <label>Valor</label>
-            <input type="number" placeholder="Valor" name="value" step="any" min="0" required><br>
-            <label>Forma de pagamento</label>
-            <select name="formaPagamento" required><br>
-                <option value="boleto">Boleto</option>
-                <option value="pix">Pix</option>
-                <option value="cartao">Cartão de crédito/débito</option>
-                <option value="transferencia">Transferência Bancária</option>>
-            </select><br>
-            <label for="">Data da transação</label>
-            <input type="date" name="dateRegister" required><br>
-            <label for="">Sacar/Transferir</label>
-            <select name="sacar" required><br>
-                <option value="Enviada">Transferência</option>
-                <option value="Recebida">Sacar</option>
-            </select><br>
-            <input type="submit" value="Realizar" name="btnRegister" class="btnRegister">
+            <label>Nome</label>
+            <input type="text" placeholder="Insira seu Nome" name="name" required><br>
+            <label>Email</label>
+            <input type="text" placeholder="Insira seu Email" name="email" required><br>
+            <label>Telefone</label>
+            <input type="text" placeholder="Insira seu Telefone" name="phone" required><br>
+            
+            <input type="submit" value="Registrar" name="btnRegister" class="btnRegister">
         </form>
         <?php
-        if (isset($_POST['value'])) {
-            include './../php/sql/addDados.php';
+        if (isset($_POST['name'])) {
+            include __DIR__ .'/sql/addData.php';
         }
         ?>
     </div>

@@ -10,30 +10,21 @@
     color: #000;
 }
 
-nav {
-    background-color: #181818;
-    box-shadow: 0 30px 45px #000000a9;
+body{
+    background-image: url("../src/bkg1.jpg");
+    background-size: cover;
 }
-
-.navbar {
-    --bs-navbar-hover-color: #323232;
-}
-
-.nav-link {
+.alert{
+    font-size: 3rem;
     color: #fff;
 }
-
-.navbar-brand {
-    color: #fff;
+a{
+    font-size: 3rem;
+    color: #131086;
+    text-decoration: none;
 }
 
-.navbar-nav .nav-link.active {
-    color: #fff;
-}
-
-
-.form_transacoes {
-    background-image: linear-gradient(45deg, #131086, #b621f3);
+.form_register {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -54,7 +45,6 @@ form {
     width: 500px;
     height: 500px;
     border-radius: 8px;
-    /* background-color: #6f42c199; */
     border-radius: 20px;
     background: #fff;
     box-shadow: 29px 29px 75px #00000056,
@@ -73,10 +63,6 @@ input {
     padding-left: 30px;
 }
 
-input[type="number"] {
-    color: black;
-}
-
 input[type="submit"] {
     border: none;
     padding-left: 0;
@@ -84,15 +70,3 @@ input[type="submit"] {
     background: linear-gradient(45deg, #131086, #b621f3);
 }
 
-.dd {
-    margin-top: 10px;
-    color: #0f0;
-    font-size: 20px;
-}
-
-.welcome {
-    font-size: 20px;
-    color: #fff;
-    position: relative;
-    margin-bottom: 30px;
-}
