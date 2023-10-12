@@ -45,7 +45,10 @@ if (!isset($_SESSION['user'])) {
             <label>Telefone</label>
             <input type="text" placeholder="Insira seu Telefone" name="phone" required><br>
             
-            <label>Qual periodo deseja estudar?</label>
+            <label>Data de Nascimento</label>
+            <input type="date" name="date" required><br>
+            
+            <label>Qual período deseja estudar?</label>
             <select name='period' required>
                 <option value="null">Já estudo na Etec</option>
                 <option value="Manhã">Manhã</option>
