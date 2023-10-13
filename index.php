@@ -29,11 +29,11 @@
             <form action="?" method="post">
                 <div class = 'input'>
                     <label class='label'>Email</label>
-                    <input type="email" name="email_login" placeholder="Email" required>
+                    <input type="email" name="email_login" required>
                 </div><br>
                 <div class = 'input'>
                     <label class='label'>Senha</label>
-                    <input type="password" name="password_login" placeholder="Senha" required>
+                    <input type="password" name="password_login" required>
                 </div><br>
                 <input type="submit" value="Entrar" class="btnLogin" name="btnLogin"><br>
             </form>

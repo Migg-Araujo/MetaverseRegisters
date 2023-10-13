@@ -36,7 +36,6 @@ body {
     align-items: center;
     border-radius: 30px;
     background: transparent;
-    backdrop-filter: blur(15px);
 }
 
 .form_login form input,

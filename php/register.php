@@ -35,18 +35,15 @@ if (!isset($_SESSION['user'])) {
 
 <body>
     <div class="form_register">
+        <h1>METAVERSO</h1>
         <form action="?" method="post">
-            <label>Nome</label>
-            <input type="text" placeholder="Insira seu Nome" name="name" required><br>
+            <input type="text" placeholder="Insira seu Nome" name="name" required>
 
-            <label>Email</label>
-            <input type="text" placeholder="Insira seu Email" name="email" required><br>
+            <input type="text" placeholder="Insira seu Email" name="email" required>
 
-            <label>Telefone</label>
-            <input type="text" placeholder="Insira seu Telefone" id='phone' name="phone" required><br>
+            <input type="text" placeholder="Insira seu Telefone" id='phone' name="phone" required>
             
-            <label>Data de Nascimento</label>
-            <input type="text" id='date' placeholder='21/10/2023' name="date" required><br>
+            <input type="text" id='date' placeholder='Insira sua Data de Nascimento' name="date" required>
             
             <label>Qual período deseja estudar?</label>
             <select name='period' required>
@@ -54,7 +51,7 @@ if (!isset($_SESSION['user'])) {
                 <option value="Manhã">Manhã</option>
                 <option value="Tarde">Tarde</option>
                 <option value="Noite">Noite</option>
-            </select><br>
+            </select>
 
             <label>Qual curso deseja fazer?</label>
             <select name='curse' required>
@@ -65,7 +62,7 @@ if (!isset($_SESSION['user'])) {
                 <option value="Meio Ambiente">Meio Ambiente</option>
                 <option value="Nutrição">Nutrição</option>
                 <option value="Segurança do Trabalho">Segurança do Trabalho</option>
-            </select><br>
+            </select>
             
             <input type="submit" value="Registrar" name="btnRegister" class="btnRegister">
         </form>
