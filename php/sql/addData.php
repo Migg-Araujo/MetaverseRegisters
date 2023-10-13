@@ -8,10 +8,10 @@ $email = $_POST["email"];
 $phone = $_POST["phone"];
 $date = $_POST["date"];
 $period = $_POST["period"];
-$curse = $_POST["curse"];
+$course = $_POST["course"];
 
-$sql = "INSERT INTO USER (NAME, EMAIL, PHONE, DATE, PERIOD, CURSE)
-VALUES ('$name', '$email', '$phone', '$date', '$period', '$curse')";
+$sql = "INSERT INTO USER (NAME, EMAIL, PHONE, DATE, PERIOD, COURSE)
+VALUES ('$name', '$email', '$phone', '$date', '$period', '$course')";
 
 if ($conn->query($sql) === TRUE) {
 } else {

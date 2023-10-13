@@ -88,8 +88,35 @@ input[type="submit"]:hover {
 h1{
     margin-bottom: 35px;
     font-size: 4rem;
-    background-image: linear-gradient(45deg, #131086, #b621f3);
+    background: linear-gradient(45deg, #131086, #b621f3);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
+    animation: gradient 4s infinite;
+}
+
+.thanks{
+    position: absolute;
+    color: chartreuse;
+    font-size: 0;
+    /* animation: thanks 4s linear infinite; */
+}
+
+@keyframes gradient {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
+
+@keyframes thanks {
+ 0%{font-size: 0rem}
+ 40%{font-size: 5rem;}
+ 60%{font-size: 5rem;}
+ 100%{font-size: 0rem;}
+}
+
+@keyframes hidden {
+    0%{visibility: hidden;}
+    100%{visibility: hidden;}
 }

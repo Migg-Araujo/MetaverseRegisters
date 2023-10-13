@@ -24,19 +24,13 @@ if (!isset($_SESSION['user'])) {
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/register.css">
     <title>Metaverse</title>
-    <script type="text/javascript">
-        document.addEventListener('keydown', function(event) {
-            if (event.ctrlKey && event.keyCode === 36) {
-                window.location.href = './login/logout.php';
-            }
-        });
-    </script>
 </head>
 
 <body>
     <div class="form_register">
+        <p class='thanks' id='thanks'>Obrigado por se Registrar!</p>
         <h1>METAVERSO</h1>
-        <form action="?" method="post">
+        <form action="?" method="post" id='form' onsubmit="return thanksAnimation()">
             <input type="text" placeholder="Insira seu Nome" name="name" required>
 
             <input type="text" placeholder="Insira seu Email" name="email" required>
@@ -54,7 +48,7 @@ if (!isset($_SESSION['user'])) {
             </select>
 
             <label>Qual curso deseja fazer?</label>
-            <select name='curse' required>
+            <select name='course' required>
                 <option value="null">Já estudo na Etec</option>
                 <option value="Administração">Administração</option>
                 <option value="Desenvolvimento de Sistemas">Desenvolvimento de Sistemas</option>
@@ -115,6 +109,28 @@ if (!isset($_SESSION['user'])) {
 
             input.value = value;
         });
-    </script>
 
+        function thanksAnimation() {
+                var form = document.getElementById('form');
+                var thanks = document.getElementById('thanks');
+
+                thanks.style.animationName = 'thanks';
+                thanks.style.animationDuration = '4s';
+                form.style.animationName = 'hidden';
+                form.style.animationDuration = '4s';
+
+                setTimeout(function() {
+                    form.submit();
+                }, 4000);
+
+                return false;
+            };
+    </script>
+    <script type="text/javascript">
+            document.addEventListener('keydown', function(event) {
+                if (event.ctrlKey && event.keyCode === 36) {
+                    window.location.href = './login/logout.php';
+                }
+            });
+        </script>
 </html>
