@@ -87,14 +87,16 @@ input[type="submit"] {
 input[type="submit"]:hover {
     scale: 1.1;
 }
+
 .title{
     margin-bottom: 35px;
     font-size: 4rem;
     background: linear-gradient(45deg, #131086 15%, #b621f3 50%, #131086 85%);
+    background-size: 200%;
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
-    animation: gradient 4s infinite linear;
+    animation: gradient 8s infinite linear;
 }
 
 .thanks{
@@ -116,7 +118,7 @@ input[type="submit"]:hover {
 
 @keyframes gradient {
     0%{background-position: 0px}
-    100%{background-position: 391px}
+    100%{background-position: 782px}
 }
 
 @keyframes thanks {
