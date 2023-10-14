@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 ::placeholder {
@@ -11,8 +11,9 @@
 }
 
 body{
-    background-image: url("../src/bkg1.jpg");
+    background-image: url("../src/bkg2.jpg");
     background-size: cover;
+    animation: backgroundLoop 20s infinite linear;
 }
 .alert{
     font-size: 3rem;
@@ -48,8 +49,8 @@ form {
     width: 600px;
     height: 700px;
     border-radius: 20px;
-    background: linear-gradient(#000000, #000000) padding-box,
-    linear-gradient(145deg, transparent 25%,#e81cff, #40c9ff) border-box;
+    /* background: linear-gradient(#000000, #000000) padding-box,
+    linear-gradient(145deg, transparent 25%,#e81cff, #40c9ff) border-box; */
     border: 2px solid transparent;
     padding: 32px 24px;
     font-size: 14px;
@@ -57,6 +58,7 @@ form {
     color: white;
     gap: 20px;
     box-sizing: border-box;
+    z-index: 2;
 }
 
 select,
@@ -85,15 +87,14 @@ input[type="submit"] {
 input[type="submit"]:hover {
     scale: 1.1;
 }
-h1{
+.title{
     margin-bottom: 35px;
     font-size: 4rem;
-    background: linear-gradient(45deg, #131086, #b621f3);
-    background-size: 200% 200%;
+    background: linear-gradient(45deg, #131086 15%, #b621f3 50%, #131086 85%);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
-    animation: gradient 4s infinite;
+    animation: gradient 4s infinite linear;
 }
 
 .thanks{
@@ -101,12 +102,21 @@ h1{
     color: chartreuse;
     font-size: 0;
     /* animation: thanks 4s linear infinite; */
+    z-index: 2;
+}
+
+.amoung{
+    position: absolute;
+    width: calc(100vh/9*16);
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    right: 0;
 }
 
 @keyframes gradient {
-    0%{background-position:0% 0%}
-    50%{background-position:100% 100%}
-    100%{background-position:0% 0%}
+    0%{background-position: 0px}
+    100%{background-position: 391px}
 }
 
 @keyframes thanks {
@@ -119,4 +129,9 @@ h1{
 @keyframes hidden {
     0%{visibility: hidden;}
     100%{visibility: hidden;}
+}
+
+@keyframes backgroundLoop {
+    0%{background-position: 0px}
+    100%{background-position: 3840px}
 }

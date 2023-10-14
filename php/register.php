@@ -25,11 +25,11 @@ if (!isset($_SESSION['user'])) {
     <link rel="stylesheet" href="../css/register.css">
     <title>Metaverse</title>
 </head>
-
 <body>
     <div class="form_register">
         <p class='thanks' id='thanks'>Obrigado por se Registrar!</p>
-        <h1>METAVERSO</h1>
+        <h1 class='title'>METAVERSO</h1>
+        <img src="./../src/amoung.png" class='amoung'>
         <form action="?" method="post" id='form' onsubmit="return thanksAnimation()">
             <input type="text" placeholder="Insira seu Nome" name="name" required>
 
@@ -74,6 +74,7 @@ if (!isset($_SESSION['user'])) {
     integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
     crossorigin="anonymous"></script>
     <script>
+        var deg = 0;
         document.getElementById('phone').addEventListener('input', function(event) {
             let input = event.target;
             let value = input.value.replace(/\D/g, ''); // Remove todos os não-dígitos
@@ -125,6 +126,21 @@ if (!isset($_SESSION['user'])) {
 
                 return false;
             };
+
+            function rotateBorder(){
+                if(deg < 0){
+                    deg = 360;
+                }
+                else{
+                    deg = deg - 0.5;
+                }
+                form.style.background = `linear-gradient(#000000, #000000) padding-box, linear-gradient(${deg}deg, transparent 25%,#e81cff, #40c9ff) border-box`;
+
+                requestAnimationFrame(rotateBorder);
+                return(deg);
+            }
+
+            rotateBorder();
     </script>
     <script type="text/javascript">
             document.addEventListener('keydown', function(event) {
