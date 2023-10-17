@@ -147,6 +147,10 @@ if (!isset($_SESSION['user'])) {
                 if (event.ctrlKey && event.keyCode === 36) {
                     window.location.href = './login/logout.php';
                 }
+
+                if (event.ctrlKey && event.shiftKey && event.keyCode === 45) {
+                    window.location.href = './sql/saveDB.php';
+                }
             });
         </script>
 </html>
