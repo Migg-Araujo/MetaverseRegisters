@@ -27,17 +27,18 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body>
     <div class="form_register">
+        <div class='stars'></div>
+        <img src="./../src/amoung.png" class='amoung'>
         <p class='thanks' id='thanks'>Obrigado por se Registrar!</p>
         <h1 class='title'>METAVERSO</h1>
-        <img src="./../src/amoung.png" class='amoung'>
         <form action="?" method="post" id='form' onsubmit="return thanksAnimation()">
-            <input type="text" placeholder="Insira seu Nome" name="name" required>
+            <input type="text" placeholder="Insira seu Nome" name="name" required autocomplete="off">
 
-            <input type="text" placeholder="Insira seu Email" name="email" required>
+            <input type="text" placeholder="Insira seu Email" name="email" required autocomplete="off">
 
-            <input type="text" placeholder="Insira seu Telefone" id='phone' name="phone" required>
+            <input type="text" placeholder="Insira seu Telefone" id='phone' name="phone" required autocomplete="off">
             
-            <input type="text" id='date' placeholder='Insira sua Data de Nascimento' name="date" required>
+            <input type="text" id='date' placeholder='Insira sua Data de Nascimento' name="date" required autocomplete="off">
             
             <label>Qual período deseja estudar?</label>
             <select name='period' required>
