@@ -27,8 +27,14 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body>
     <div class="form_register">
-        <div class='stars'></div>
-        <img src="./../src/amoung.png" class='amoung'>
+        <img src="./../src/amg1.png" class='among among1'>
+        <img src="./../src/amg2.png" class='among among2'>
+        <img src="./../src/amg3.png" class='among among3'>
+        <img src="./../src/amg4.png" class='among among4'>
+        <img src="./../src/amg5.png" class='among among5'>
+        <img src="./../src/amg6.png" class='among among6'>
+        <div class='stars1'></div>
+        <div class='stars2'></div>
         <p class='thanks' id='thanks'>Obrigado por se Registrar!</p>
         <h1 class='title'>METAVERSO</h1>
         <form action="?" method="post" id='form' onsubmit="return thanksAnimation()">
@@ -46,6 +52,7 @@ if (!isset($_SESSION['user'])) {
                 <option value="Manhã">Manhã</option>
                 <option value="Tarde">Tarde</option>
                 <option value="Noite">Noite</option>
+                <option value="Outro">Outro</option>
             </select>
 
             <label>Qual curso deseja fazer?</label>
@@ -57,6 +64,7 @@ if (!isset($_SESSION['user'])) {
                 <option value="Meio Ambiente">Meio Ambiente</option>
                 <option value="Nutrição">Nutrição</option>
                 <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                <option value="Outro">Outro</option>
             </select>
             
             <input type="submit" value="Registrar" name="btnRegister" class="btnRegister">

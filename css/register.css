@@ -33,15 +33,26 @@ a{
     flex-direction: column;
 }
 
-.stars{
+.stars1{
     position: absolute;
     width: 100%;
     height: 100vh;
     background-image: url("../src/bkg2.jpg");
     background-size: cover;
-    opacity: 0.6;
+    opacity: 0.3;
     animation: backgroundLoop 20s infinite linear;
 }
+
+.stars2{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../src/bkg3.jpg");
+    background-size: cover;
+    opacity: 0.3;
+    animation: backgroundLoop 15s infinite linear;
+}
+
 option{
     color: #000000;
 }
@@ -117,13 +128,40 @@ input[type="submit"]:hover {
     z-index: 2;
 }
 
-.amoung{
+.among{
     position: absolute;
-    width: calc(100vh/9*16);
-    height: 100%;
-    z-index: 1;
-    top: 0;
-    right: 0;
+    width: 10vh;
+    height: 10vh;
+}
+.among1{
+    top: 5%;
+    left: 10%;
+    animation: rotate 4s infinite linear;
+}
+.among2{
+    top: 50%;
+    left: 15%;
+    animation: rotate 5s infinite linear; 
+}
+.among3{
+    bottom: 5%;
+    left: 10%;
+    animation: rotate 4s infinite linear;
+}
+.among4{
+    top: 5%;
+    right: 10%;
+    animation: rotate 6s infinite linear;
+}
+.among5{
+    top: 50%;
+    right: 15%;
+    animation: rotate 4s infinite linear;
+}
+.among6{
+    bottom: 5%;
+    right: 10%;
+    animation: rotate 5s infinite linear;
 }
 
 @keyframes gradient {
@@ -146,4 +184,9 @@ input[type="submit"]:hover {
 @keyframes backgroundLoop {
     0%{background-position: 0px}
     100%{background-position: 3840px;}
+}
+
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
